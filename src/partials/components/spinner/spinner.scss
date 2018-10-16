@@ -1,11 +1,23 @@
 .spinner {
   animation: 1s spin linear infinite;
-  border: rem(8px) solid rgba(#000, 0.1);
+  border: rem(6px) solid rgba(#000, 0.1);
   border-left-color: var(--primary-color);
   border-radius: 50%;
   display: inline-block;
-  height: rem(50px);
-  width: rem(50px);
+  height: rem(40px);
+  width: rem(40px);
+
+  &--small {
+    border-width: rem(4px);
+    height: rem(25px);
+    width: rem(25px);
+  }
+
+  &--big {
+    border-width: rem(8px);
+    height: rem(60px);
+    width: rem(60px);
+  }
 }
 
 @keyframes spin {

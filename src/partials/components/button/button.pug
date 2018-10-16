@@ -1,0 +1,9 @@
+//- @param {object} config Contém as configurações do componente
+    - {string} id ID do botão para futuras interações no JS
+    - {string} extraClass Classes de estilo do botão
+    - {string} label Rótulo do botão
+mixin addButton(config)
+  button(type='button' id=config.id class=`button ${config.extraClass || ''}`)= config.label
+
+//- Exemplos de uso
+  +addButton({ id: 'btn-123', extraClass: 'button--primary', label: 'Botão' })

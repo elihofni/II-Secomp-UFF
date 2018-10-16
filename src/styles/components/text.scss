@@ -9,7 +9,7 @@
   text-align: center;
   text-transform: uppercase;
 
-  @include fluid-type(320px, 1024px, 24px, 40px);
+  @include fluid-type($bp-mobile, $bp-wide, 24px, 40px);
 }
 
 .subtitle {
@@ -17,7 +17,7 @@
   line-height: 2em;
   margin-bottom: rem(28px);
 
-  @include fluid-type(320px, 1024px, 18px, 34px);
+  @include fluid-type($bp-mobile, $bp-wide, 18px, 34px);
 }
 
 .section-title {
@@ -30,7 +30,7 @@
   text-align: center;
   text-transform: uppercase;
 
-  @include fluid-type(320px, 1024px, 22px, 36px);
+  @include fluid-type($bp-mobile, $bp-wide, 22px, 36px);
 }
 
 .paragraph {
@@ -38,7 +38,7 @@
   line-height: 1.2em;
   margin-bottom: rem(30px);
 
-  @include fluid-type(320px, 1024px, 12px, 20px);
+  @include fluid-type($bp-mobile, $bp-wide, 12px, 20px);
 
   &--small {
     @include fontSize(12px);

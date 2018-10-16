@@ -1,2 +1,9 @@
-mixin addSpinner()
-  .spinner
+//- {string} id ID do spinner para futuras interações no JS
+  - {string} extraClass Classes de estilo do spinner
+mixin addSpinner(id, extraClass)
+  div(class=`spinner ${extraClass ? `spinner--${extraClass}` : ''}`)
+
+
+//- Exemplos de uso
+  +addSpinner()
+  +addSpinner('spinner-123', 'small')
