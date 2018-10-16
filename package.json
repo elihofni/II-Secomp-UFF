@@ -20,7 +20,7 @@
     "clean-dist": "npm run remove-dist && mkdir dist",
     "remove-dist": "rimraf dist",
     "precommit": "npm run lint",
-    "prepush": "npm-run-all --parallel lint test"
+    "prepush": "npm-run-all --parallel lint"
   },
   "author": "Elihofni Guirra Lima",
   "license": "ISC",
