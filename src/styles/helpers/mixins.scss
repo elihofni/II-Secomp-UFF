@@ -1,0 +1,23 @@
+@mixin fontSize($size) {
+  font-size: $size;
+  font-size: rem($size);
+}
+
+// https://css-tricks.com/snippets/css/fluid-typography/
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+
+  @if $u1 == unit($max-vw) and $u1 == unit($min-font-size) and $u1 == unit($max-font-size) {
+    & {
+      @include fontSize($min-font-size);
+
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{($max-font-size - $min-font-size) / 1px} * ((100vw - #{$min-vw}) / #{($max-vw - $min-vw) / 1px}));
+      }
+
+      @media screen and (min-width: $max-vw) {
+        @include fontSize($max-font-size);
+      }
+    }
+  }
+}

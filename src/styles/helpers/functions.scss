@@ -1,0 +1,15 @@
+@function vw($size, $base: 1920px) {
+  @return $size / $base * 100vw;
+}
+
+@function em($size, $base: 16px) {
+  @return $size / $base * 1em;
+}
+
+@function letterspacing($size) {
+  @return $size / 1000 * 1em;
+}
+
+@function rem($size, $base: 16px) {
+  @return $size / $base * 1rem;
+}

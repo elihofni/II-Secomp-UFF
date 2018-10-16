@@ -1,0 +1,37 @@
+:root {
+  // Palette
+  --black: #000;
+  --new-black: #1e1e1e;
+  --graffiti: #444;
+  --grey: #6b6b6b;
+  --grey--light: #b7b7b7;
+  --white: #fff;
+  --green: #489ea6;
+  --yellow: #f0cb70;
+  --red: #c13768;
+
+  // States
+  --success: var(--green);
+  --warning: var(--yellow);
+  --error: var(--red);
+  --disabled: var(--grey--light);
+
+  // Text Color
+  --text-color--dark: var(--graffiti);
+  --text-color: #777;
+  --text-color--light: #999;
+
+  // Default
+  --primary-color: #1362ac;
+  --secondary-color: #62bfc5;
+
+  // Components
+  --border-color: #e1e1e1;
+  --link-color: #25ac8e;
+
+  // Social
+  --facebook: #3b5998;
+  --pinterest: #bd081c;
+  --twitter: #55acee;
+  --whatsapp: #075e54;
+}

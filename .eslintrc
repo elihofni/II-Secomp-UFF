@@ -1,0 +1,36 @@
+{
+  "extends": "airbnb-base",
+  "installedESLint": true,
+  "cache": true,
+  "rules": {
+    "no-unused-expressions": 0,
+    "valid-jsdoc": [
+      "error",
+      {
+        "requireReturn": false,
+        "requireReturnDescription": false
+      }
+    ],
+    "require-jsdoc": [
+      "error",
+      {
+        "require": {
+          "FunctionDeclaration": false,
+          "MethodDefinition": false,
+          "ClassDeclaration": false,
+          "ArrowFunctionExpression": false
+        }
+      }
+    ]
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+  },
+  "globals": {
+    "window": true,
+    "jQuery": true,
+    "$": true,
+    "ga": true
+  }
+}

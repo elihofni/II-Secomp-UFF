@@ -1,0 +1,13 @@
+.icon {
+  color: currentColor;
+  display: inline-block;
+  width: rem(24px);
+
+  &--small {
+    width: rem(16px);
+  }
+
+  &--big {
+    width: rem(32px);
+  }
+}

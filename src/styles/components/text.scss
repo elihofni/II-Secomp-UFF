@@ -1,0 +1,46 @@
+.title {
+  border-bottom: 1px solid #dadada;
+  color: var(--text-color);
+  font-weight: var(--fw-light);
+  letter-spacing: letterspacing(-2);
+  line-height: 1.2em;
+  margin-bottom: rem(21px);
+  padding-bottom: rem(20px);
+  text-align: center;
+  text-transform: uppercase;
+
+  @include fluid-type(320px, 1024px, 24px, 40px);
+}
+
+.subtitle {
+  color: var(--text-color);
+  line-height: 2em;
+  margin-bottom: rem(28px);
+
+  @include fluid-type(320px, 1024px, 18px, 34px);
+}
+
+.section-title {
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-color);
+  font-weight: var(--fw-light);
+  margin: rem(65px) auto rem(20px);
+  max-width: rem(870px);
+  padding-bottom: rem(25px);
+  text-align: center;
+  text-transform: uppercase;
+
+  @include fluid-type(320px, 1024px, 22px, 36px);
+}
+
+.paragraph {
+  color: var(--text-color);
+  line-height: 1.2em;
+  margin-bottom: rem(30px);
+
+  @include fluid-type(320px, 1024px, 12px, 20px);
+
+  &--small {
+    @include fontSize(12px);
+  }
+}

@@ -1,0 +1,25 @@
+### Base Project ###
+node_modules
+dist
+npm-debug.log
+package-lock.json
+
+### WebStorm ###
+.idea/
+
+### Windows ###
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride

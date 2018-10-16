@@ -1,0 +1,34 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-order"
+  ],
+  "ignoreFiles": [
+    "./src/styles/reset.scss",
+    "**/**.svg",
+    "**/**.xml",
+    "**/**.ts"
+  ],
+  "rules": {
+    "max-nesting-depth": 3,
+    "selector-max-id": 1,
+    "at-rule-no-vendor-prefix": true,
+    "property-no-vendor-prefix": true,
+    "selector-no-vendor-prefix": true,
+    "value-no-vendor-prefix": true,
+    "string-quotes": "single",
+    "block-no-empty": true,
+    "selector-attribute-quotes": "always",
+    "function-url-quotes": "always",
+    "selector-max-compound-selectors": 3,
+    "selector-max-type": 0,
+    "comment-empty-line-before": "always",
+    "comment-no-empty": true,
+    "no-invalid-double-slash-comments": true,
+    "order/order": [
+      "custom-properties",
+      "declarations"
+    ],
+    "order/properties-alphabetical-order": true
+  }
+}
