@@ -1,0 +1,45 @@
+//- // Exemplo de objeto para passar de parâmetro
+  const squad = {
+    team: 'Brasil',
+    formation: '4-1-4-1',
+    bgColor: '#F8E71C',
+    borderColor: '#00489C',
+    players: [
+      {x: 1, y: 3, name: 'Alisson', number: 1},
+
+      {x: 2, y: 1, name: 'Marcelo', number: 16},
+      {x: 2, y: 2, name: 'Miranda', number: 3},
+      {x: 2, y: 4, name: 'Marquinhos', number: 13},
+      {x: 2, y: 5, name: 'Filipe Luis', number: 6},
+
+      {x: 3, y: 3, name: 'Fernandinho', number: 5},
+
+      {x: 4, y: 1, name: 'Neymar', number: 10},
+      {x: 4, y: 2, name: 'R. Augusto', number: 8},
+      {x: 4, y: 4, name: 'Paulinho', number: 15},
+      {x: 4, y: 5, name: 'P. Coutinho', number: 11},
+
+      {x: 6, y: 3, name: 'G. Jesus', number: 9}
+    ],
+  };
+
+mixin addPlayers({ players = [], bgColor = '#4A90E2', borderColor = '#FFF' })
+  each player in players
+    div(class=`player player--x-${player.x}--y-${player.y}`, style=`background-color: ${bgColor}; border-color: ${borderColor};`)
+      small.player__number(style=`color: ${borderColor || '#FFF'};`)= player.number || 0
+      small.player__name= player.name || 'Nome do Jogador'
+
+mixin addSquad({ team, formation, players, bgColor, borderColor })
+  .squad-wrapper
+    .team-details
+      p.team-details__team-name= team
+      p.team-details__formation= formation
+    .field
+      //- TODO Descomentar para visualizar as zonas do campo
+        each zone in [1, 2, 3, 4, 5, 6]
+          span(class=`zone-x--${zone}`)
+      div(class=`players-wrapper formation--${formation}`)
+        +addPlayers({ players, bgColor, borderColor })
+
+// Exemplo de uso
+  +addSquad(squad)
