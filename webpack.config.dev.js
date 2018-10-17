@@ -91,6 +91,7 @@ module.exports = {
                 data,
                 user,
                 slugify,
+                settings,
                 process: {
                   env: {
                     NODE_ENV: 'development',
