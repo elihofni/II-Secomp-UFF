@@ -1,0 +1,25 @@
+.icon-arrow {
+  color: var(--svg-color--2);
+  cursor: pointer;
+  display: inline-block;
+  height: rem(60px);
+  transition: color 0.3s;
+  width: rem(60px);
+
+  &:hover {
+    color: var(--svg-color--1);
+  }
+
+  &--left {
+    transform: rotate(180deg);
+  }
+
+  &--right {
+    transform: rotate(0deg);
+  }
+
+  @media (max-width: $bp-tablet) {
+    height: rem(45px);
+    width: rem(45px);
+  }
+}

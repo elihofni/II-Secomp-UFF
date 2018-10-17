@@ -1,3 +1,29 @@
+include ./../../components/scoreboard/scoreboard
+include ./../../components/shadows/shadows
+include ./../../components/arrow/arrow
+
 section.section
-  h1.section-title Seção gol
-  p.paragraph Parágrafo
+  h1.section-title Seção Pênaltis
+
+  .all-goals-wrapper
+    .gamescores
+      each penalty, index in data
+        +addGameScore(penalty, index + 1)
+
+    .goalpost
+      svg(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 870 280')
+        title Trave
+        path(fill="#f6f7f7", stroke="#d7d7d7", stroke-miterlimit="10", d='M62 253.4V3h746v250.4h-10V13H72v240.4')
+        path(fill='none', stroke="#d7d7d7", stroke-miterlimit="4", d='M-1 253.4h872')
+
+    .penalty-shadows
+      .penalty-shadow-wrapper
+        +addPenaltyShadow(0)
+      each penalty, index in data
+        .penalty-shadow-wrapper(id="penalty-shadow-wrapper--" + (index + 1))
+          +addPenaltyShadow(index + 1)
+
+    button.penalties-shadow-nav.penalties-shadow-nav--left
+      +addArrow('left')
+    button.penalties-shadow-nav.penalties-shadow-nav--right
+      +addArrow('right')

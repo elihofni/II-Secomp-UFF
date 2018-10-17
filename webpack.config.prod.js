@@ -14,8 +14,9 @@ function slugify(string) {
   const from = 'àáäâãèéëêìíïîõòóöôùúüûñç·/_,:;';
   const to = 'aaaaaeeeeiiiiooooouuuunc------';
 
-  from.split('')
-    .map((char, index) => str.replace(new RegExp(from.charAt(index), 'g'), to.charAt(index)));
+  for (let i = 0, l = from.length; i < l; i += 1) {
+    str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+  }
 
   str = str.replace(/[^a-z0-9 -]/g, '')
     .replace(/\s+/g, '-')

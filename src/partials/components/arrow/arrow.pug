@@ -1,0 +1,5 @@
+mixin addArrow(direction)
+  div(class=`icon-arrow ${direction ? `icon-arrow--${direction}` : ''}`)
+    svg(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 100 100')
+      title Seta de navegação
+      path(fill="currentColor" d='M75.8 54.8l-42 42c-2.6 2.6-7 2.6-9.6 0-2.6-2.7-2.6-7 0-9.7l37-37-37-37c-2.6-2.8-2.6-7 0-9.7 2.7-2.7 7-2.7 9.7 0l41.8 42c1.3 1.2 2 3 2 4.7 0 1.8-.7 3.5-2 4.8z')
