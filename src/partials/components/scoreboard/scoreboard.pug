@@ -2,21 +2,4 @@ include ./../badges/teams
 
 mixin addGameScore(game, index)
   .gamescore-wrapper(id=`gamescore-wrapper--${index}`)
-    p.championship= game.championship
-    span.date= ' ' + game.date
-    .scoreboard-wrapper
-      .team.team--1
-        p.team__name= game.team1
-        p.team__name--mobile= game.slug1
-        .team__badge
-          +addTeamBadge(slugify(game.team1))
-      .score
-        - const [home, away] = game.score.split('x')
-        != home
-        span.separator x
-        != away
-      .team.team--2
-        .team__badge
-          +addTeamBadge(slugify(game.team2))
-        p.team__name= game.team2
-        p.team__name--mobile= game.slug2
+    //- TODO Criar componente do placar

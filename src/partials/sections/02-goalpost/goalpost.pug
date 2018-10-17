@@ -7,8 +7,8 @@ section.section
 
   .all-goals-wrapper
     .gamescores
-      each penalty, index in data
-        +addGameScore(penalty, index + 1)
+      //- TODO criar componente do placar
+      +addGameScore()
 
     .goalpost
       svg(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 870 280')
