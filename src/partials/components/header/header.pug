@@ -1,9 +1,4 @@
-include ../icons/icons
-
 .main-header-wrapper
-  .main-header(id='main-header')
-    .current-user
-      .user-pic
-        +addIcon('executive')
-      h3.user-name#header__user-name= user.name
-    .log-out
+  .main-header
+    h3.main-header__title= settings.pageTitle
+    h3.main-header__user-name= user.name
