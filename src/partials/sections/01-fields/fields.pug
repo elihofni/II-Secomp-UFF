@@ -1,25 +1,10 @@
 include ./../../components/spinner/spinner
 include ./../../components/button/button
 
-section.section
+section.section#id123
   h1.section-title Seção campo
   p.paragraph Parágrafo
 
   +addButton({ label: 'Botão 1' })
-  //-
-    +addButton({ label: 'Botão 2', extraClass: 'button--primary' })
-    +addButton({ label: 'Botão 3', extraClass: 'button--primary button--small' })
-    +addButton({ label: 'Botão 4', extraClass: 'button--secondary button--big' })
-    +addButton({ label: 'Botão 5', extraClass: 'button--disabled' })
 
   +addSpinner()
-  //-
-    span(style='color: #c13768')
-      +addSpinner(null,'small')
-    span(style='color: #f0cb70')
-      +addSpinner(null,'small')
-    span(style='color: #489ea6')
-      +addSpinner('spinner-456','small')
-    span(style='color: dodgerblue')
-      +addSpinner('spinner-section-2','small')
-
