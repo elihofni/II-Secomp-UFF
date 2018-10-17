@@ -24,22 +24,10 @@
   };
 
 mixin addPlayers({ players = [], bgColor = '#4A90E2', borderColor = '#FFF' })
-  each player in players
-    div(class=`player player--x-${player.x}--y-${player.y}`, style=`background-color: ${bgColor}; border-color: ${borderColor};`)
-      small.player__number(style=`color: ${borderColor || '#FFF'};`)= player.number || 0
-      small.player__name= player.name || 'Nome do Jogador'
+  <div class="player"> </div>
 
 mixin addSquad({ team, formation, players, bgColor, borderColor })
-  .squad-wrapper
-    .team-details
-      p.team-details__team-name= team
-      p.team-details__formation= formation
-    .field
-      //- TODO Descomentar para visualizar as zonas do campo
-        each zone in [1, 2, 3, 4, 5, 6]
-          span(class=`zone-x--${zone}`)
-      div(class=`players-wrapper formation--${formation}`)
-        +addPlayers({ players, bgColor, borderColor })
+  <div class="squad-wrapper"> </div>
 
 // Exemplo de uso
   +addSquad(squad)
