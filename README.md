@@ -4,8 +4,6 @@
 
 Elihofni Guirra Lima - Ciência da Computação - UFF
 
-Gabriel Godoy - Front end Sênior
-
 [Roteiro do mini curso](https://trello.com/b/FsQZB7U7/secomp-uff-escreva-menos-produza-mais)
 
 ---
@@ -43,3 +41,10 @@ Gabriel Godoy - Front end Sênior
 ## Outras ferramentas
 * [webpack 3](https://webpack.js.org/) como um empacotador de código para juntar os módulos de ES6 e gerar um pacote final(index.html, main.css e bundle.js)
 * [babel](http://babeljs.io/) para transpilar código ES6+ para JavaScript compatível com os browsers mais antigos
+
+---
+
+## O que cada branch contém
+- 1: spinner e botão - master
+- 2: 1 + campinho - feature/campinho
+- 3: 2 + penaltis - feature/penaltis
